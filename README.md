@@ -20,16 +20,18 @@ git remote add upstream https://github.com/ksiller/ds2002-course.git
 ```
 git fetch upstream
 ```
-3. Merge your branch with the upstream branch.
+3. Switch to your main branch and merge with the upstream branch.
 ```
-git merge upstream/main main
+git switch main
+git merge upstream/main
 ```
 
 This can be run in a single block:
 ```
 git remote add upstream https://github.com/ksiller/ds2002-course.git
+git switch main
 git fetch upstream
-git merge upstream/main main
+git merge upstream/main
 ```
 
 ## Saving your changes

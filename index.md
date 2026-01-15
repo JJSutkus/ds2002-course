@@ -32,11 +32,11 @@ As a final assignment you will be working in groups of 4-5 on a **[data pipeline
 
 ### Updating Your Fork
 
-To stay current with new releases from the course repository:
+To stay current with new releases into the course repository, follow these steps:
 
-1. Add an upstream source (if not already added):
+1. Add an upstream source
    ```bash
-   git remote add upstream git@github.com:ksiller/ds2002-course.git
+   git remote add upstream https://github.com/ksiller/ds2002-course.git
    ```
 
 2. Fetch from the upstream branch:
@@ -44,10 +44,19 @@ To stay current with new releases from the course repository:
    git fetch upstream
    ```
 
-3. Merge your branch with the upstream branch:
+3. Merge your branch with the upstream branch.
    ```bash
-   git merge upstream/main main
+   git merge upstream/main
    ```
+
+This can be run in a single block:
+```bash
+git remote add upstream https://github.com/ksiller/ds2002-course.git
+# make sure all local changes are committed
+git switch main
+git fetch upstream
+git merge upstream/main
+```
 
 ### Saving Your Changes
 
