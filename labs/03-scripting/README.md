@@ -23,8 +23,6 @@ pip install requests
 Depending on your account permissions you may get an error, preventing you from installing packages into the system's python environment. In such case, add the `--user` flag to the install command, which will direct the installation into a personal package library in your home directory `~/.local`.
 
 ```bash
-python3 -m pip install --user requests
-
 # or
 
 pip install --user requests
