@@ -81,7 +81,7 @@ def load(df, output_file):
     try:
         logger.info("Loading data into output file.")
 
-        df.to_csv(output_file, index=False)
+        df.to_csv(output_file, mode='a', index=False, header=not os.path.exists(output_file))
         logger.info("Data successfully changed to CSV file.")
 
     except Exception as e:
