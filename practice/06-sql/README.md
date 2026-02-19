@@ -31,7 +31,7 @@ If you cannot spin up the MySQL Codespace environment, you can do the following 
 ```bash
 docker run -it mysql:8.0 mysql -h  ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
 ```
-Replace `<uva_computing_id>` with your UVA computing id (no <>). `docker run -it mysql:8.0` launches the docker container service. It pulls the mysql container image (version 8.0) from DockerHub, a central software container registry, and launches in an interactive subprocess the `mysql` CLI with the command line arguments your provided.
+`docker run -it mysql:8.0` launches the docker container service. It pulls the mysql container image (version 8.0) from DockerHub, a central software container registry, and launches in an interactive subprocess the `mysql` CLI with the command line arguments your provided.
 
 **Command options explained:**
 - `-h`: Specifies the server hosting the database
