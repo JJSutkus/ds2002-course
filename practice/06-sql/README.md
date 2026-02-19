@@ -31,12 +31,12 @@ If you cannot spin up the MySQL Codespace environment, you can do the following 
 ```bash
 docker run -it mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
 ```
-The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches in an interactive subprocess the `mysql` CLI with the command line arguments you provided.
+The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches the `mysql` CLI in an interactive subprocess with the command line arguments you provided.
 
 **Option C (HPC: apptainer):**
-If you are on an HPC cluster, you can use the Apptainer container runtime. The concept and syntax are very similar to docker.
+If you are on [UVA's HPC cluster](../../setup/hpc.md), you can use the Apptainer container runtime. The concept and syntax are very similar to Docker.
 
-Get the docker image:
+Get the Docker image:
 ```bash
 apptainer pull ~/mysql-8.0.sif docker://mysql:8.0
 ```
@@ -44,6 +44,7 @@ This will pull the `mysql:8.0` image from DockerHub and convert it to an Apptain
 
 Run mysql:
 ```bash
+module load apptainer
 apptainer run ~/mysql-8.0.sif mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
 ```
 

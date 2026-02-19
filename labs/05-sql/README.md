@@ -12,9 +12,9 @@ You're walking your colleague through the following steps:
 
 ### Setup
 
-You'll need access to MySQL command-line tools.
+You'll need access to MySQL command-line tools. Choose one of the following options: A, B, or C. 
 
-**Option A:**
+**Option A (MySQL Codespace):**
 Use Codespace with the MySQL environment (see [setup instructions](../../setup/codespace-mysql.md)). 
 
 ```bash
@@ -25,12 +25,24 @@ mysql -h dbhost -u root -p
 
 Create a new database called `<computing_id>_db`, e.g., `khs3z_db`. Use this database for Case Study 1. You have full admin privileges.
 
-**Option B:**
+**Option B (Docker -> AWS RDS MySQL):**
 If you cannot spin up the MySQL Codespace environment, you can do the following in the standard course Codespace or local terminal, assuming the Docker container service is installed:
 ```bash
 docker run -it mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p
 ```
-Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches in an interactive subprocess the `mysql` CLI with the command line arguments you provided.
+Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches the `mysql` CLI in an interactive subprocess with the command line arguments you provided.
+
+**Password:** For MySQL access in AWS RDS, the password is the same as your computing ID.  
+
+**Option C (HPC, Apptainer -> AWS RDS MySQL):**
+
+If you are running on [UVA's HPC cluster](../../setup/hpc.md), you can use Apptainer with Docker images to run MySQL commands.
+
+```bash
+module load apptainer
+apptainer pull ~/mysql-8.0.sif docker://mysql:8.0
+apptainer run ~/mysql-8.0.sif mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id>
+```
 
 **Password:** For MySQL access in AWS RDS, the password is the same as your computing ID.  
 
@@ -61,19 +73,28 @@ The AWS RDS instance has an empty database `<computing_id>_db` set up for you, e
 
 Execute your `initialize.sql` script against the MySQL database:
 
-**Option A (in MySQL Codespace):**
+**Option A (MySQL Codespace):**
 ```bash
 mysql -h dbhost -u root -p < initialize.sql
 ```
 
 When prompted, enter the password from your Codespace secret `MYSQL_PASSWORD`.
 
-**Option B (in standard course Codespace or terminal with Docker):**
+**Option B (Docker -> AWS RDS MySQL):**
 ```bash
 docker run -it mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p < initialize.sql
 ```
+Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches the `mysql` CLI in an interactive subprocess with the command line arguments you provided.
 
-Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). The `docker run -it mysql:8.0` command launches the Docker container service. It pulls the MySQL container image (version 8.0) from DockerHub, a central software container registry, and launches in an interactive subprocess the `mysql` CLI with the command line arguments you provided.
+**Password:** For MySQL access in AWS RDS, the password is the same as your computing ID.
+
+**Option C (HPC, Apptainer -> AWS RDS MySQL):**
+```bash
+module load apptainer
+apptainer pull ~/mysql-8.0.sif docker://mysql:8.0
+apptainer run ~/mysql-8.0.sif mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p < initialize.sql
+```
+Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). 
 
 **Password:** For MySQL access in AWS RDS, the password is the same as your computing ID.
 
@@ -89,18 +110,25 @@ Replace `<uva_computing_id>` with your UVA computing ID (no `<>`). The `docker r
    - Include a WHERE clause to filter the results
 
 3. Execute the query and save the output to a file:
-   **Option A (in MySQL Codespace):**
+   
+   **Option A (MySQL Codespace):**
    ```bash
    mysql -h dbhost -u root -p < query.sql > query_results.txt
    ```
    
    When prompted, enter the password from your Codespace secret `MYSQL_PASSWORD`.
 
-   **Option B (in standard course Codespace or terminal with Docker):**
+   **Option B (Docker -> AWS RDS MySQL):**
    ```bash
    docker run -it mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p < query.sql > query_results.txt
    ```
 
+   **Option C (HPC, Apptainer -> AWS RDS MySQL):**
+   ```bash
+   module load apptainer
+   apptainer pull ~/mysql-8.0.sif docker://mysql:8.0
+   apptainer run ~/mysql-8.0.sif mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p < query.sql > query_results.txt
+   ```
    Your password for the AWS RDS instance is the same as your computing ID.
 
 4. Include `initialize.sql`, `query.sql`, and `query_results.txt` in your `mywork/lab5` folder.
@@ -149,14 +177,21 @@ For this task, you will need:
 Before you start coding, explore the `iss` database to understand its structure:
 
 1. Connect to the MySQL database:
-   **Option A:**
+   **Option A (AWS RDS MySQL):**
    ```bash
    mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
    ```
 
-   **or Option B:**
+   **or Option B (Docker -> AWS RDS MySQL):**
    ```bash
    docker run -it mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
+   ```
+
+   **or Option C (HPC, Apptainer -> AWS RDS MySQL):**
+   ```bash
+   module load apptainer
+   apptainer pull ~/mysql-8.0.sif docker://mysql:8.0
+   apptainer run ~/mysql-8.0.sif mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u ds2002 -p
    ```
 
 2. When prompted, enter the password from **Canvas > Modules > Week 06 SQL & Relational Databases > AWS_RDS_credentials.txt**.
