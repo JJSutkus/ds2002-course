@@ -151,9 +151,17 @@ The group has outgrown CSV files—they need a real database! They've set up a M
 
 For this task, you will need:
 
-1. **Python3**: Should be available in your path. Use `which python3` to find the path. Use a shebang at the top of your script: either `#!/usr/bin/env python` or `#!/usr/bin/env python3`.
+1. **Python3**: Should be available in your path. 
 
-2. **Python Libraries**: Install the required packages:
+    **If you are on the UVA HPC system**, you have to [set up your Python environment](../../setup/hpc.md#python-setup) first. Then run these two commands to load the correct Python version and preinstalled packages.
+
+    ```bash
+    module load miniforge
+    source activate ds2002
+    ```
+    Note how the command line prompt now starts with `(ds2002) ...`
+
+1. **Python Libraries**: Install the required packages:
    ```bash
    pip install mysql-connector-python pandas requests
    ```
@@ -163,9 +171,9 @@ For this task, you will need:
    pip install --user mysql-connector-python pandas requests
    ```
 
-3. **Database Access**: You'll need the MySQL password from **Canvas > Modules > Week 06 SQL & Relational Databases > AWS_RDS_credentials.txt**.
+2. **Database Access**: You'll need the MySQL password from **Canvas > Modules > Week 06 SQL & Relational Databases > AWS_RDS_credentials.txt**.
 
-4. **Environment Variables**: Set up your database connection variables in your terminal:
+3. **Environment Variables**: Set up your database connection variables in your terminal:
    ```bash
    export DBHOST='ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com'
    export DBUSER='ds2002'
