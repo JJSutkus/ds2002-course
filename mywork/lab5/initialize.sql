@@ -1,5 +1,3 @@
-CREATE DATABASE awj8sf_db;
-
 USE awj8sf_db;
 CREATE TABLE players (
     player_name VARCHAR(50) PRIMARY KEY,
@@ -48,31 +46,31 @@ CREATE TABLE teams (
 );
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Buffalo Bills", "BUF", "AFC East", 12)
+VALUES("Buffalo Bills", "BUF", "AFC East", 12);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("New England Patriots", "NE", "AFC East", 14)
+VALUES("New England Patriots", "NE", "AFC East", 14);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Seattle Seahawks", "SEA", "NFC West", 14)
+VALUES("Seattle Seahawks", "SEA", "NFC West", 14);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Detriot Lions", "DET", "NFC North", 9)
+VALUES("Detriot Lions", "DET", "NFC North", 9);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Dallas Cowboys", "DAL", "AFC East", 7)
+VALUES("Dallas Cowboys", "DAL", "AFC East", 7);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Jacksonville Jaguars", "JAX", "AFC South", 13)
+VALUES("Jacksonville Jaguars", "JAX", "AFC South", 13);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Denver Broncos", "DEN", "AFC West", 14)
+VALUES("Denver Broncos", "DEN", "AFC West", 14);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Los Angeles Chargers", "LAC", "AFC West", 11)
+VALUES("Los Angeles Chargers", "LAC", "AFC West", 11);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Los Angeles Rams", "LAR", "NFC West", 12)
+VALUES("Los Angeles Rams", "LAR", "NFC West", 12);
 
 INSERT INTO teams (team_name, team_abr, division, wins)
-VALUES("Chicago Bears", "CHI", "NFC North", 11)
+VALUES("Chicago Bears", "CHI", "NFC North", 11);
