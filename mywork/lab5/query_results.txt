@@ -1,0 +1,7 @@
+player_name	team	touchdowns	interceptions	team_name	team_abr	division	wins
+Bo Nix	Denver Broncos	25	11	Denver Broncos	DEN	AFC West	14
+Drake Maye	New England Patriots	31	8	New England Patriots	NE	AFC East	14
+Josh Allen	Buffalo Bills	25	10	Buffalo Bills	BUF	AFC East	12
+Matthew Stafford	Los Angeles Rams	46	8	Los Angeles Rams	LAR	NFC West	12
+Sam Darnold	Seattle Seahawks	25	14	Seattle Seahawks	SEA	NFC West	14
+Trevor Lawrence	Jacksonville Jaguars	29	12	Jacksonville Jaguars	JAX	AFC South	13
