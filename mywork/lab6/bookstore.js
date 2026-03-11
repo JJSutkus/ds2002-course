@@ -1,5 +1,5 @@
 // Task 2: use database
-use bookstore
+// use bookstore
 
 // Task 3: insert first author
 db.authors.insertOne({
