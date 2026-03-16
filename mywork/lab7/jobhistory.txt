@@ -1,0 +1,73 @@
+JobID           JobName  Partition    Account  AllocCPUS      State ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+10107553     ood_vscode interacti+     ds2002          2 CANCELLED+      0:0 
+10107553.ba+      batch                ds2002          2  CANCELLED     0:15 
+10108205     ood_vscode interacti+     ds2002          2    TIMEOUT      0:0 
+10108205.ba+      batch                ds2002          2  CANCELLED     0:15 
+10163685     ood_vscode interacti+     ds2002          2 CANCELLED+      0:0 
+10163685.ba+      batch                ds2002          2  CANCELLED     0:15 
+10163754     ood_vscode interacti+     ds2002          2    TIMEOUT      0:0 
+10163754.ba+      batch                ds2002          2  CANCELLED     0:15 
+10166131     ood_vscode interacti+     ds2002          0 CANCELLED+      0:0 
+10172316     ood_vscode interacti+     ds2002          2    TIMEOUT      0:0 
+10172316.ba+      batch                ds2002          2  CANCELLED     0:15 
+10172433          hello standard-+     ds2002          1  COMPLETED      0:0 
+10172433.ba+      batch                ds2002          1  COMPLETED      0:0 
+10172521_1   text-array standard-+     ds2002          1     FAILED      2:0 
+10172521_1.+      batch                ds2002          1     FAILED      2:0 
+10172521_2   text-array standard-+     ds2002          1     FAILED      2:0 
+10172521_2.+      batch                ds2002          1     FAILED      2:0 
+10172521_3   text-array standard-+     ds2002          1     FAILED      2:0 
+10172521_3.+      batch                ds2002          1     FAILED      2:0 
+10172521_4   text-array standard-+     ds2002          1     FAILED      2:0 
+10172521_4.+      batch                ds2002          1     FAILED      2:0 
+10172521_5   text-array standard-+     ds2002          1     FAILED      2:0 
+10172521_5.+      batch                ds2002          1     FAILED      2:0 
+10172557_1   text-array standard-+     ds2002          1     FAILED      2:0 
+10172557_1.+      batch                ds2002          1     FAILED      2:0 
+10172557_2   text-array standard-+     ds2002          1     FAILED      2:0 
+10172557_2.+      batch                ds2002          1     FAILED      2:0 
+10172557_3   text-array standard-+     ds2002          1     FAILED      2:0 
+10172557_3.+      batch                ds2002          1     FAILED      2:0 
+10172557_4   text-array standard-+     ds2002          1     FAILED      2:0 
+10172557_4.+      batch                ds2002          1     FAILED      2:0 
+10172557_5   text-array standard-+     ds2002          1     FAILED      2:0 
+10172557_5.+      batch                ds2002          1     FAILED      2:0 
+10172670     pytorch-e+ gpu-a100-+     ds2002          4  COMPLETED      0:0 
+10172670.ba+      batch                ds2002          4  COMPLETED      0:0 
+10175555     ood_vscode interacti+     ds2002          2    TIMEOUT      0:0 
+10175555.ba+      batch                ds2002          2  CANCELLED     0:15 
+10305336     ood_vscode interacti+     ds2002          2 CANCELLED+      0:0 
+10305336.ba+      batch                ds2002          2  CANCELLED     0:15 
+10305377     ood_vscode interacti+     ds2002          2    RUNNING      0:0 
+10305377.ba+      batch                ds2002          2    RUNNING      0:0 
+10305398     book_seri+ standard-+     ds2002          1     FAILED      1:0 
+10305398.ba+      batch                ds2002          1     FAILED      1:0 
+10305406     book_seri+ standard-+     ds2002          1     FAILED      2:0 
+10305406.ba+      batch                ds2002          1     FAILED      2:0 
+10305416     book_seri+ standard-+     ds2002          1     FAILED      1:0 
+10305416.ba+      batch                ds2002          1     FAILED      1:0 
+10305429     book_seri+ standard-+     ds2002          1     FAILED      2:0 
+10305429.ba+      batch                ds2002          1     FAILED      2:0 
+10305459     book_seri+ standard-+     ds2002          1  COMPLETED      0:0 
+10305459.ba+      batch                ds2002          1  COMPLETED      0:0 
+10305468_1   book_array standard-+     ds2002          1     FAILED      2:0 
+10305468_1.+      batch                ds2002          1     FAILED      2:0 
+10305468_2   book_array standard-+     ds2002          1     FAILED      2:0 
+10305468_2.+      batch                ds2002          1     FAILED      2:0 
+10305468_3   book_array standard-+     ds2002          1     FAILED      2:0 
+10305468_3.+      batch                ds2002          1     FAILED      2:0 
+10305468_4   book_array standard-+     ds2002          1     FAILED      2:0 
+10305468_4.+      batch                ds2002          1     FAILED      2:0 
+10305468_5   book_array standard-+     ds2002          1     FAILED      2:0 
+10305468_5.+      batch                ds2002          1     FAILED      2:0 
+10305598_1   book_array standard-+     ds2002          1  COMPLETED      0:0 
+10305598_1.+      batch                ds2002          1  COMPLETED      0:0 
+10305598_2   book_array standard-+     ds2002          1  COMPLETED      0:0 
+10305598_2.+      batch                ds2002          1  COMPLETED      0:0 
+10305598_3   book_array standard-+     ds2002          1  COMPLETED      0:0 
+10305598_3.+      batch                ds2002          1  COMPLETED      0:0 
+10305598_4   book_array standard-+     ds2002          1  COMPLETED      0:0 
+10305598_4.+      batch                ds2002          1  COMPLETED      0:0 
+10305598_5   book_array standard-+     ds2002          1  COMPLETED      0:0 
+10305598_5.+      batch                ds2002          1  COMPLETED      0:0 
