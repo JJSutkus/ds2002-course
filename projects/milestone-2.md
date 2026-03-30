@@ -16,6 +16,6 @@ Within your team, discuss how you want to divide the work. Some may prefer to di
 
 5. Test and debug with test data of your choosing; inspect logs and database records. Add a `data` folder to your GitHub repository with at least one example input file. The ISS project processes JSON data from an API endpoint. Since there is no typical pipeline input file, create a JSON file with a representative payload returned by the ISS API.
 
-6. Document deployment and how to use the pipeline or scripts in the `README.md` file. See [How to write a README](how-to-write-a-readme.md).
+6. Document deployment/installation and how to use the pipeline or scripts in the `README.md` file. See [How to write a README](how-to-write-a-readme.md).
 
-7. Follow the instructions in the Canvas assignment to submit your work.
+7. Submit the url to your GitHub project repository in the `Milestone 2` assignment on Canvas.

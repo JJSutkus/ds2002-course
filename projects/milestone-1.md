@@ -13,11 +13,13 @@
    Review the high-level schematic of your chosen project (see project subfolders). Create a PDF file with the following sections: 
    
    **Team name:**
+
    **Team members:**
+   
    **Project:** A/B/C
 
    a. Data Structures 
-   - List **input file types** and their sources
+   - List **input file types** and their sources 
    - List **output file types** 
    - Describe structure of (meta)data records your pipeline will process/write to database(s). You can do this in table format (for SQL DBs) or JSON (for NoSQL) DBs. 
    
@@ -27,6 +29,8 @@
    | Status | VARCHAR(25) | "SUCCESS" |
    | Created | DATETIME | 2026-04-10 14:31:19 |
    | ... | ... | ... | ... |
+   
+   Think about appropriate normalization. If you're setting up multiple tables, describe each separately.
 
    Example NoSQL:
    ```json
@@ -36,6 +40,8 @@
       ...
    }
    ```
+
+   If you're setting up multiple collections, describe each separately.
 
    b. Describe which specific systems will be used at each step of your pipeline: 
    - **storage systems:** local, AWS S3, UVA HPC home, UVA HPC scratch, etc?
