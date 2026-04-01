@@ -19,6 +19,31 @@ By completing this lab, you will be able to:
 
 ---
 
+To complete this lab, start a Code Server (VSCode) session in Open OnDemand on UVA's HPC system. 
+
+**Activate your environment**
+```bash
+module load miniforge
+source activate ds2002
+```
+
+Your access to AWS should already be configured from previous labs. Check to confirm:
+
+```bash
+aws sts get-caller-identity
+```
+
+The output should look like this:
+```json
+{
+    "UserId": "AIDAYRXHJIA3N7XIGYSMI",
+    "Account": "587821826102",
+    "Arn": "arn:aws:iam::587821826102:user/ds2002-user"
+}
+```
+
+If not, go through the `aws configure` steps of [Lab 08](../08-s3/README.md#setup) again.
+
 ## Task 1 - Docker on AWS (EC2)
 
 ### Step 1: Setup
